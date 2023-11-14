@@ -1,69 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Website Title</title>
+    <meta charset = "utf-8"> 
+    <title>Albert's Blog</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <p>
-        changes
-        more changes
-    </p>
-    <div class="resultParas">
-        <p class="guesses"></p>
-        <p class="lastResult"></p>
-        <p class="lowOrHi"></p>
-    </div>
-    <label for="guessField">Enter a guess: </label>
-    <input type="number" id="guessField" class="guessField" />
-    <input type="submit" value="Submit guess" class="guessSubmit" />
-    <script> 
-        let randomNumber = Math.floor(Math.random() * 100) + 1;
+    <header> 
+        <div class="header_wrap">
+            <nav>
+                <ul class="header_menu" role="menu">
+                    <li class="header_menu_list" role="menuitem"> 
+                        <a href = "./pages/aboutme.html">
+                            "About Me"
+                        </a>
 
-        const guesses = document.querySelector(".guesses");
-        const lastResult = document.querySelector(".lastResult");
-        const lowOrHi = document.querySelector(".lowOrHi");
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <script>
 
-        const guessSubmit = document.querySelector(".guessSubmit");
-        const guessField = document.querySelector(".guessField");
-
-        let guessCount = 1;
-        let resetButton;
-        function checkGuess() {
-            const userGuess = Number(guessField.value);
-            if(guessCount === 1){
-                guesses.textContent = 'Previous Guesses';
-            }
-            guesses.textContent= '${guesses.textContent} ${userGuess}'
-            guessSubmit.addEventListener("click", checkGuess);
-
-        }
-        function setGameOver() {
-            guessField.disabled = true;
-            guessSubmit.disabled = true;
-            resetButton = document.createElement("button");
-            resetButton.textContent = "Start new game";
-            document.body.append(resetButton);
-            resetButton.addEventListener("click", resetGame);
-        }
-        function resetGame() {
-            guessCount = 1;
-          
-            const resetParas = document.querySelectorAll(".resultParas p");
-            for (const resetPara of resetParas) {
-              resetPara.textContent = "";
-            }
-          
-            resetButton.parentNode.removeChild(resetButton);
-          
-            guessField.disabled = false;
-            guessSubmit.disabled = false;
-            guessField.value = "";
-            guessField.focus();
-          
-            lastResult.style.backgroundColor = "white";
-          
-            randomNumber = Math.floor(Math.random() * 100) + 1;
-        }
     </script>
 </body>
 </html>

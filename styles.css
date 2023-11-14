@@ -1,29 +1,55 @@
 body {
-    background-color: rgb(58, 58, 58);
-    color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 a {
     text-decoration: none;
+    color:rgb(0, 0, 0)
 }
 
 li, ol, ul {
-    list-style: none;
+    list-style-type: none;
 }
 
-.header_menu_item {
-    display: none;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 80px;
-    z-index: 999;
-    min-width: 1100px;
-    height: 420px;
-    background-color: #1ec545;
-    font-size: 0;
+nav{
+    position:relative;
+    margin: 0 15px;
+}
+
+header{
+    display:block;
+}
+
+.header_menu{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    align-content: center;
+}
+
+.header_wrap{
+    background-color: rgb(122, 135, 91);
+    margin: 15px 100px;
+}
+
+.header_menu_list{
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 30px;
+}
+
+.header_menu_list:hover{
+    background-color: beige;
+}  
+
+.logo{
+    float:left;
+    display:block;
+    background-color: rgb(255, 255, 255);
+    padding: 15px 30px;
     text-align: center;
 }
-
 
 

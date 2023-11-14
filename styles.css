@@ -4,15 +4,14 @@ body {
 }
 
 a {
-    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
-a:hover {
-    background-color: grey;
+li, ol, ul {
+    list-style: none;
 }
 
-.header_wrap {
+.header_menu_item {
     display: none;
     position: absolute;
     left: 0;
@@ -25,4 +24,6 @@ a:hover {
     font-size: 0;
     text-align: center;
 }
+
+
 

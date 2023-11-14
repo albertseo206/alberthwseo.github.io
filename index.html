@@ -34,6 +34,7 @@
                 guesses.textContent = 'Previous Guesses';
             }
             guesses.textContent= '${guesses.textContent} ${userGuess}'
+            guessSubmit.addEventListener("click", checkGuess);
 
         }
         function setGameOver() {
